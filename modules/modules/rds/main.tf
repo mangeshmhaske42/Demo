@@ -1,5 +1,5 @@
 data "aws_secretsmanager_secret" "db_password" {
-	name	= "prod/postgres/password"
+	name	= "dev/mysql/password"
 }
 
 data "aws_secretsmanager_secret_version" "db_password_version" {
