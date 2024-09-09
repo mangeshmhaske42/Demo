@@ -1,5 +1,5 @@
 resource "aws_secretsmanager_secret" "db_password" {
-    name = "dev/mysql/password"
+    name = "prod/postgres/password"
 }
 
 resource "aws_secretsmanager_secret_version" "db_password_version" {

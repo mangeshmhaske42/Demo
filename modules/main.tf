@@ -5,10 +5,10 @@ provider "aws" {
 
 module "secret_manager" {
     source      = "./modules/secret_manager"
-    db_password = var.db_password 
+    db_password = var.db_password
 }
 
-# module "rds_database" {
-#     source      = "./modules/rds"
-#     db_password = var.db_username 
-# }
+module "rds_database" {
+    source      = "./modules/rds"
+    db_username = var.db_username 
+}
