@@ -1,5 +1,8 @@
 data "aws_secretsmanager_secret" "db_password" {
 	name	= "dev/mysql/password"
+    depends_on = [ 
+        aws_secretsmanager_secret.db_password
+     ]
 }
 
 data "aws_secretsmanager_secret_version" "db_password_version" {

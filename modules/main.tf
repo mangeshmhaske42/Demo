@@ -11,4 +11,5 @@ module "secret_manager" {
 module "rds_database" {
     source      = "./modules/rds"
     db_username = var.db_username 
+    depends_on = [ module.secret_manager ]
 }
